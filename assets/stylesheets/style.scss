@@ -87,4 +87,37 @@ body{
 		border-radius:5px;
 	}
 
+	#itinerary{
+		position:relative;
+	}
+
+	.bar{
+		width:90%;
+		border:2px solid black;
+		border-radius:15px;
+		height:5%;
+		position:absolute;
+		bottom:2%;
+		left:4%;
+	}
+
+	.bar_piece{
+		width:25%;
+		height:100%;
+		border:1px solid black;
+		display:inline-block;
+		padding:0;
+		margin:0;
+	}
+
+	#bar1{
+		background-color:black;
+		border-bottom-left-radius:15px;
+		border-top-left-radius:15px;
+	}
+
+	#bar4{
+		border-bottom-right-radius:15px;
+		border-top-right-radius:15px;	
+	}
 } 
