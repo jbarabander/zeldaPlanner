@@ -6,4 +6,22 @@
 
 <body>
   <h1> this is our page </h1>
+  <ul>
+    {% for restaurant in restaurants %}
+      <li>{{restaurant.name}} at {{restaurant.place}}</li>
+    {% endfor %}
+  </ul>
+
+  <ul>
+    {% for hotel in hotels %}
+      <li>{{hotel.name}} at {{hotel.place}}</li>
+    {% endfor %}
+  </ul>
+
+  <ul>
+    {% for activity in activities %}
+      <li>{{activity.name}} at {{activity.place}}</li>
+    {% endfor %}
+  </ul>
+
 </body>
