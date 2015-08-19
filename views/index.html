@@ -1,27 +1,23 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<head>
-  <title> Zelda Yo! </title>
-</head>
-
-<body>
+{% block content %}
   <h1> this is our page </h1>
   <ul>
     {% for restaurant in restaurants %}
-      <li>{{restaurant.name}} at {{restaurant.place}}</li>
+      <li>{{restaurant.name}}</li>
     {% endfor %}
   </ul>
 
   <ul>
     {% for hotel in hotels %}
-      <li>{{hotel.name}} at {{hotel.place}}</li>
+      <li>{{hotel.name}}</li>
     {% endfor %}
   </ul>
 
   <ul>
     {% for activity in activities %}
-      <li>{{activity.name}} at {{activity.place}}</li>
+      <li>{{activity.name}}</li>
     {% endfor %}
   </ul>
 
-</body>
+{% endblock %}
