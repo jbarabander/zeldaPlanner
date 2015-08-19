@@ -3,23 +3,101 @@
 	<head>
 		<title>{% block title %}Zelda Mapper{% endblock %}</title>
 		<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/stylesheets/style.css" rel="stylesheet">
+		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3eYUzsURxoBQnBSZdpSPEavfeK0gCXrE&sensor=true"></script>
+		<script src="/javascripts/index.js"></script>
+
 	</head>
 
 	<body>
-		<div class="navbar navbar-fixed-top">
-			<div class="container">
+		<div class="navbar">
+			<div class="">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">Home</a>
+					<a class="navbar-brand" href="/"><img class='brand' src="/images/triforce_yellow.png"/></a>
+
 				</div> 
 
+				<div class="buttons">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="menu_buttons"><img class="nav_button even" src="/images/green_button.png"/>
+							<h4 class="contact_text">Contact</h4>
+						</li>
+						<li class="menu_buttons odd"><img class="nav_button odd" src="/images/blue_button.png"/>
+							<h4 class="about_text">About</h4>
+						</li>
+						<li><img id="restaurant_button" class="dropdown_button even" src="/images/restaurants_button.png"/></li>
+						<li><img id="hotel_button" class="dropdown_button odd" src="/images/hotel_button.png"/></li>
+						<li><img id="activity_button" class="dropdown_button even" src="/images/activity_button.png"/></li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 
-		<div class="container content">
-			<div class="row">
-			   {% block content %}{% endblock %}
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div id="itinerary" class="info" style="display:block;">
+					<h3>Itinerary</h3>
+
+					<div class="bar">
+						
+					</div>
+				</div>
 			</div>
+
+			<div class="col-lg-6 col-md-6 col-sm-11">
+				<div class="content">
+					<div class="row">
+					   {% block content %}{% endblock %}
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3">
+				<div id="restaurant_list" class="info list">
+					<div class="inner-info">
+						<h3>Restaurants</h3>
+						<ul>
+						{% for restaurant in restaurants %}
+							<li>{{restaurant.name}}</li>
+						{% endfor %}
+						</ul>
+					</div>
+				</div>
+
+				<div id="hotel_list" class="info list">
+					<div class="inner-info">
+						<h3>Hotels</h3>
+						<ul>
+						{% for hotel in hotels %}
+							<li>{{hotel.name}}</li>
+						{% endfor %}
+						</ul>
+					</div>
+				</div>
+
+				<div id="activity_list" class="info list">
+					<div class="inner-info">
+						<h3>Activities</h3>
+						<ul>
+						{% for activity in activities %}
+							<li>{{activity.name}}</li>
+						{% endfor %}
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
 		</div>
+
+		<div class="row">
+
+		</div>
+
+
+	
 
 	</body>
 </html>

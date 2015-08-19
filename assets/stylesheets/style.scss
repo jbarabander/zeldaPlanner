@@ -1,0 +1,90 @@
+@import "normalize";
+
+body{
+	padding:1%;
+	.dropdown_button{
+		margin-top:10%;
+		height:50px;
+
+		&.odd{
+			margin-top:80%;		
+		}
+	}
+
+	background:url('/images/background.jpg') no-repeat center center fixed;
+	background-size:cover;
+
+	.brand{
+		height:300%;
+	}
+
+	@font-face {
+		font-family: 'triforce';
+		src: url('fonts/Triforce.ttf');
+		src: local('triforce'), local('triforce'), url('fonts/triforce.ttf') format('truetype');
+	}
+
+	font-family: 'triforce';
+
+	.info{
+		display:none;
+		background-color:#66bb6a;
+		width:100%;
+		padding:1%;
+		border-radius:5px;
+		height:60vh;
+		overflow:auto;
+		
+		
+		div{
+			opacity:1;
+			color: #374012;
+		}
+
+		li{
+			list-style:none;
+		}
+	}
+
+	.nav_button{
+		height:80px;
+		margin-left:-90%;
+		padding:5%;
+
+		&.odd{
+			margin-top:50%;
+		}
+	}
+
+	.menu_buttons{
+		position:relative;
+
+	}
+
+	.contact_text{
+		position:absolute;
+		top:15%;
+		color:white;
+		left:-75%;
+	}
+
+	.about_text{
+		position:absolute;
+		top:45%;
+		color:white;
+		left:-75%;
+	}
+
+	#map-canvas{
+		height:60vh;
+		width:100%;
+		opacity:0.8;
+
+	}
+
+	.buttons{
+		margin-right:8%;
+		border-radius:5px;
+	}
+
+} 

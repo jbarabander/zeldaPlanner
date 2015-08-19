@@ -1,23 +1,5 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  <h1> this is our page </h1>
-  <ul>
-    {% for restaurant in restaurants %}
-      <li>{{restaurant.name}}</li>
-    {% endfor %}
-  </ul>
-
-  <ul>
-    {% for hotel in hotels %}
-      <li>{{hotel.name}}</li>
-    {% endfor %}
-  </ul>
-
-  <ul>
-    {% for activity in activities %}
-      <li>{{activity.name}}</li>
-    {% endfor %}
-  </ul>
-
+      <div id="map-canvas" class=""></div>
 {% endblock %}
