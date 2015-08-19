@@ -36,18 +36,24 @@
       $('#bar3').css('background-color', ''); 
       $('#bar4').css('background-color', ''); 
 
+      $('#dayNum').text('Day 1');
+
     });
 
     $('#bar2').on('click', function(){
       $('#bar2').css('background-color', 'black'); 
       $('#bar3').css('background-color', ''); 
-      $('#bar4').css('background-color', ''); 
+      $('#bar4').css('background-color', '');
+
+      $('#dayNum').text('Day 2');
+ 
     });
 
     $('#bar3').on('click', function(){
       $('#bar2').css('background-color', 'black'); 
       $('#bar3').css('background-color', 'black'); 
       $('#bar4').css('background-color', ''); 
+      $('#dayNum').text('Day 3');
 
     });
 
@@ -55,6 +61,8 @@
       $('#bar2').css('background-color', 'black'); 
       $('#bar3').css('background-color', 'black'); 
       $('#bar4').css('background-color', 'black'); 
+
+      $('#dayNum').text('Day 4');
 
     });
   });
