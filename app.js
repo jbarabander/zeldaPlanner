@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var swig = require('swig');
 var routes = require('./routes/index');
-var users = require('./routes/users');
+// var users = require('./routes/users');
+var sass = require('node-sass-middleware');
 
 var app = express();
 
@@ -17,6 +18,11 @@ app.engine('html', swig.renderFile);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(sass({
+  src: path.join(__dirname, 'assets'),
+  dest: path.join(__dirname, 'public')
+}));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -51,6 +57,7 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
+  console.log(error: err);
   res.render('error', {
     message: err.message,
     error: {}
