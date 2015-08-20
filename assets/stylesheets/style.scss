@@ -27,14 +27,20 @@ body{
 	font-family: 'triforce';
 
 	.info{
-		display:none;
 		background-color:#66bb6a;
 		width:100%;
 		padding:1%;
 		border-radius:5px;
-		height:60vh;
-		overflow:auto;
 		
+		@media(min-device-width:1025px){
+			height:65vh;
+			overflow:auto;
+
+		}
+
+		@media(max-device-width: 500px){
+			height:auto;
+		}
 		
 		div{
 			opacity:1;
@@ -44,6 +50,10 @@ body{
 		li{
 			list-style:none;
 		}
+	}
+
+	.list{
+		display:none;
 	}
 
 	.nav_button{
@@ -76,9 +86,10 @@ body{
 	}
 
 	#map-canvas{
-		height:60vh;
+		height:65vh;
 		width:100%;
 		opacity:0.8;
+		border-radius:5px;
 
 	}
 
@@ -119,6 +130,51 @@ body{
 	#bar4{
 		border-bottom-right-radius:15px;
 		border-top-right-radius:15px;	
+	}
+
+	a.navbar-brand{
+		*{
+			display:inline-block;
+		}
+	}
+
+
+	.info-block{
+		vertical-align:top;
+
+		@media(min-device-width:1025px){
+			width:20%;
+			position:absolute;
+			top:0;
+		}
+
+		@media(max-device-width: 1024px){
+			width:48%;
+			padding:1%;
+		}
+	}
+
+	#map-block{
+		text-align:center;
+		vertical-align:top;
+		
+		@media(min-device-width:1025px){
+			width:55%;
+		}
+
+		@media(max-device-width: 1024px){
+			width:100%;
+		}
+
+
+	}
+
+	.left{
+		left: 1%;
+	}
+
+	.right{
+		right:1%;
 	}
 } 
 

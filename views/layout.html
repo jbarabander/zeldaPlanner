@@ -14,7 +14,9 @@
 		<div class="navbar">
 			<div class="">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/"><img class='brand' src="/images/triforce_yellow.png"/></a>
+					<a class="navbar-brand" href="/"><img class='brand' src="/images/triforce_yellow.png"/>
+						<h1>Zelda Mapper</h1>
+					</a>
 
 				</div> 
 
@@ -35,9 +37,20 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div id="itinerary" class="info" style="display:block;">
+		
+
+		<div class="row" style="position:relative">
+
+			<div id="map-block" class="" style=" margin-left:auto; margin-right:auto;">
+				<div style="text-align:center; margin-left:auto; margin-right:auto;">
+					<div class="">
+					   {% block content %}{% endblock %}
+					</div>
+				</div>
+			</div>
+
+			<div class="info-block pull-left left">
+				<div id="itinerary" class="info">
 					<h3>Itinerary</h3>
 					<h4 id="dayNum">Day 1</h4>
 
@@ -51,15 +64,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6 col-md-6 col-sm-11">
-				<div class="content">
-					<div class="row">
-					   {% block content %}{% endblock %}
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3">
+			<div class="info-block pull-right right">
 				<div id="restaurant_list" class="info list">
 					<div class="inner-info">
 						<h3>Restaurants</h3>
