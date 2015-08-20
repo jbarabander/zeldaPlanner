@@ -368,8 +368,16 @@ body {
     body .info div {
       opacity: 1;
       color: #374012; }
-    body .info li {
-      list-style: none; }
+    body .info ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+    body .info .red-heart {
+      background: url("/images/heart-red.svg") no-repeat left top;
+      padding-left: 18px; }
+    body .info .white-heart {
+      background: url("/images/heart-white.svg") no-repeat left top;
+      padding-left: 18px; }
   body .nav_button {
     height: 80px;
     margin-left: -90%;

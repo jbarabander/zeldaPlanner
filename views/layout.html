@@ -36,7 +36,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-lg-2 col-md-4">
+			<div class="col-lg-3 col-md-4">
 				<div id="itinerary" class="info" style="display:block;">
 					<h3>Itinerary</h3>
 					<h4 id="dayNum">Day 1</h4>
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-8 col-md-8 col-sm-11">
+			<div class="col-lg-6 col-md-6 col-sm-11">
 				<div class="content">
 					<div class="row">
 					   {% block content %}{% endblock %}
@@ -59,13 +59,13 @@
 				</div>
 			</div>
 
-			<div class="col-lg-2">
+			<div class="col-lg-3">
 				<div id="restaurant_list" class="info list">
 					<div class="inner-info">
 						<h3>Restaurants</h3>
 						<ul>
 						{% for restaurant in restaurants %}
-							<li>{{restaurant.name}}</li>
+							<li class='white-heart'>{{restaurant.name}}</li>
 						{% endfor %}
 						</ul>
 					</div>
@@ -76,7 +76,7 @@
 						<h3>Hotels</h3>
 						<ul>
 						{% for hotel in hotels %}
-							<li>{{hotel.name}}</li>
+							<li class='white-heart'>{{hotel.name}}</li>
 						{% endfor %}
 						</ul>
 					</div>
@@ -87,7 +87,7 @@
 						<h3>Activities</h3>
 						<ul>
 						{% for activity in activities %}
-							<li>{{activity.name}}</li>
+							<li class='white-heart'>{{activity.name}}</li>
 						{% endfor %}
 						</ul>
 					</div>

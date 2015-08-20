@@ -1,15 +1,25 @@
   $(document).ready(function(){
      initialize_gmaps();
 
+     $('li').on('click', function() {
+       if($(this).hasClass('red-heart')) {
+         $(this).removeClass('red-heart').addClass('white-heart');
+      }
+      else {
+        $(this).removeClass('white-heart').addClass('red-heart');
+
+        }
+      });
+
      $('#activity_list').css('display', 'block');
 
     $('#restaurant_button').on('click', function(){
-      
+
       if($('#restaurant_list').css('display') == 'none'){
           $('.list').hide();
           $('#restaurant_list').fadeIn();
       }
-      
+
 
     });
 
@@ -32,35 +42,35 @@
     });
 
     $('#bar1').on('click', function(){
-      $('#bar2').css('background-color', ''); 
-      $('#bar3').css('background-color', ''); 
-      $('#bar4').css('background-color', ''); 
+      $('#bar2').css('background-color', '');
+      $('#bar3').css('background-color', '');
+      $('#bar4').css('background-color', '');
 
       $('#dayNum').text('Day 1');
 
     });
 
     $('#bar2').on('click', function(){
-      $('#bar2').css('background-color', 'black'); 
-      $('#bar3').css('background-color', ''); 
+      $('#bar2').css('background-color', 'black');
+      $('#bar3').css('background-color', '');
       $('#bar4').css('background-color', '');
 
       $('#dayNum').text('Day 2');
- 
+
     });
 
     $('#bar3').on('click', function(){
-      $('#bar2').css('background-color', 'black'); 
-      $('#bar3').css('background-color', 'black'); 
-      $('#bar4').css('background-color', ''); 
+      $('#bar2').css('background-color', 'black');
+      $('#bar3').css('background-color', 'black');
+      $('#bar4').css('background-color', '');
       $('#dayNum').text('Day 3');
 
     });
 
     $('#bar4').on('click', function(){
-      $('#bar2').css('background-color', 'black'); 
-      $('#bar3').css('background-color', 'black'); 
-      $('#bar4').css('background-color', 'black'); 
+      $('#bar2').css('background-color', 'black');
+      $('#bar3').css('background-color', 'black');
+      $('#bar4').css('background-color', 'black');
 
       $('#dayNum').text('Day 4');
 
@@ -88,4 +98,4 @@ function initialize_gmaps() {
     });
     // Add the marker to the map by calling setMap()
     marker.setMap(map);
-} 
+}

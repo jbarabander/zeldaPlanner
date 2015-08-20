@@ -13,6 +13,7 @@ body{
 	}
 
 	background:url('/images/background.jpg') no-repeat center center fixed;
+	// background:#E680B2;
 	background-size:cover;
 
 	.brand{
@@ -43,9 +44,22 @@ body{
 			color: #374012;
 		}
 
-		li{
-			list-style:none;
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
 		}
+
+		.red-heart {
+				background: url('/images/heart-red.svg') no-repeat left top;
+				padding-left: 18px;
+			}
+
+		.white-heart {
+			background: url('/images/heart-white.svg') no-repeat left top;
+			padding-left: 18px;
+		}
+
 	}
 
 	.nav_button{
