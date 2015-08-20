@@ -338,6 +338,7 @@ table {
   border-spacing: 0; }
 
 body {
+  color: white;
   padding: 1%;
   background: url("/images/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -357,7 +358,8 @@ body {
     src: local("triforce"), local("triforce"), url("fonts/triforce.ttf") format("truetype"); } }
   body .info {
     display: none;
-    background-color: #66bb6a;
+    color: white;
+    background-color: #00A382;
     width: 100%;
     padding: 1%;
     border-radius: 5px;

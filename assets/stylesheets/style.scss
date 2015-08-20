@@ -1,6 +1,7 @@
 @import "normalize";
 
 body{
+	color: white;
 	padding:1%;
 	.dropdown_button{
 		margin-top:10%;
@@ -28,7 +29,8 @@ body{
 
 	.info{
 		display:none;
-		background-color:#66bb6a;
+		color: white;
+		background-color:#00A382;
 		width:100%;
 		padding:1%;
 		border-radius:5px;
