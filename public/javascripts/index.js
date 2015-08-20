@@ -1,9 +1,21 @@
   $(document).ready(function(){
      initialize_gmaps();
 
+     $('li').on('click', function() {
+      if($(this).hasClass('red-heart')) {
+        $(this).removeClass('red-heart').addClass('white-heart');
+        $(this).css('color', '#374012');
+     }
+     else if($(this).hasClass('white-heart')) {
+       $(this).removeClass('white-heart').addClass('red-heart');
+        $(this).css('color','white');
+
+       }
+     });
+
      $('#activity_list').css('display', 'block');
 
-    $('#restaurant_button').on('click', function(){
+    $('.restaurant_button').on('click', function(){
       
       if($('#restaurant_list').css('display') == 'none'){
           $('.list').hide();
@@ -13,7 +25,7 @@
 
     });
 
-    $('#hotel_button').on('click', function(){
+    $('.hotel_button').on('click', function(){
 
 
       if($('#hotel_list').css('display') == 'none'){
@@ -23,7 +35,7 @@
 
     });
 
-    $('#activity_button').on('click', function(){
+    $('.activity_button').on('click', function(){
       if($('#activity_list').css('display') == 'none'){
           $('.list').hide();
           $('#activity_list').fadeIn();

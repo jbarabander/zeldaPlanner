@@ -1,6 +1,7 @@
 @import "normalize";
 
 body{
+	width:100%;
 	padding:1%;
 	.dropdown_button{
 		margin-top:10%;
@@ -20,8 +21,8 @@ body{
 
 	@font-face {
 		font-family: 'triforce';
-		src: url('fonts/Triforce.ttf');
-		src: local('triforce'), local('triforce'), url('fonts/triforce.ttf') format('truetype');
+		src: url('/fonts/Triforce.ttf');
+		src: local('triforce'), local('triforce'), url('/fonts/Triforce.ttf') format('truetype');
 	}
 
 	font-family: 'triforce';
@@ -34,14 +35,12 @@ body{
 		
 		@media(min-device-width:1025px){
 			height:65vh;
-			overflow:auto;
-
 		}
 
 		@media(max-device-width: 500px){
-			height:auto;
+			height:40vh;
 		}
-		
+
 		div{
 			opacity:1;
 			color: #374012;
@@ -154,6 +153,18 @@ body{
 		}
 	}
 
+	.inner-info{
+		@media(min-device-width:1025px){
+			height:90%;
+			overflow:auto;
+
+		}
+
+		@media(max-device-width: 500px){
+			height:90%;
+		}
+	}
+
 	#map-block{
 		text-align:center;
 		vertical-align:top;
@@ -175,6 +186,65 @@ body{
 
 	.right{
 		right:1%;
+	}
+
+	.red-heart {
+        background: url('/images/heart-red.svg') no-repeat left top;
+    }
+
+    .white-heart {
+        background: url('/images/heart-white.svg') no-repeat left top;
+    }
+
+    .white-heart, .red-heart{
+        background-size: 20px 20px;
+        padding-left: 18px;
+        margin-top:2%;
+    }
+	
+	@media(min-device-width:1025px){
+		.mobile_menu{
+			display:none;
+		}
+	}
+
+	@media(max-device-width: 700px){
+		.buttons{
+			display:none;
+		}
+
+		.desktop{
+			display:none;
+		}
+
+		.navbar-header, .navbar-header{
+			display:block;
+			clear:both;
+			width:100%;
+			height:auto;
+		}
+
+		.navbar{
+			clear:both;
+			height:100px;
+		}
+
+		.mobile_menu{
+			text-align:center;
+		}
+	}
+
+	.activity_button, .hotel_button, .restaurant_button{
+		display:inline-block;
+	}
+
+	.active{
+		font-weight:bold;
+		color:white;
+	}
+
+	.add_button{
+		width:90%;
 	}
 } 
 

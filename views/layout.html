@@ -19,7 +19,6 @@
 					</a>
 
 				</div> 
-
 				<div class="buttons">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="menu_buttons"><img class="nav_button even" src="/images/green_button.png"/>
@@ -28,16 +27,14 @@
 						<li class="menu_buttons odd"><img class="nav_button odd" src="/images/blue_button.png"/>
 							<h4 class="about_text">About</h4>
 						</li>
-						<li><img id="restaurant_button" class="dropdown_button even" src="/images/restaurants_button.png"/></li>
-						<li><img id="hotel_button" class="dropdown_button odd" src="/images/hotel_button.png"/></li>
-						<li><img id="activity_button" class="dropdown_button even" src="/images/activity_button.png"/></li>
+						<li><img id="restaurant_button" class="restaurant_button dropdown_button even" src="/images/restaurants_button.png"/></li>
+						<li><img id="hotel_button" class="dropdown_button odd hotel_button" src="/images/hotel_button.png"/></li>
+						<li><img id="activity_button" class="dropdown_button even activity_button" src="/images/activity_button.png"/></li>
 					</ul>
 				</div>
 
 			</div>
 		</div>
-
-		
 
 		<div class="row" style="position:relative">
 
@@ -65,37 +62,54 @@
 			</div>
 
 			<div class="info-block pull-right right">
+		
 				<div id="restaurant_list" class="info list">
 					<div class="inner-info">
-						<h3>Restaurants</h3>
+						<h3 class="desktop">Restaurants</h3>
+						<div class="mobile_menu">
+							<h2 class="activity_button">Activities</h2> | <h2 class="hotel_button">Hotels</h2> | <h2 class="restaurant_button active">Restaurants</h2>
+						</div>
 						<ul>
 						{% for restaurant in restaurants %}
-							<li>{{restaurant.name}}</li>
+							<li class="white-heart">{{restaurant.name}}</li>
 						{% endfor %}
 						</ul>
+
+						
 					</div>
+					<button type="button" class="btn btn-lg center-block add_button">Add</button>
 				</div>
 
 				<div id="hotel_list" class="info list">
 					<div class="inner-info">
-						<h3>Hotels</h3>
+						<h3 class="desktop">Hotels</h3>
+						<div class="mobile_menu">
+							<h2 class="activity_button">Activities</h2> | <h2 class="hotel_button active">Hotels</h2> | <h2 class="restaurant_button">Restaurants</h2>
+						</div>
 						<ul>
 						{% for hotel in hotels %}
-							<li>{{hotel.name}}</li>
+							<li class="white-heart">{{hotel.name}}</li>
 						{% endfor %}
 						</ul>
+					
 					</div>
+						<button type="button" class="btn btn-lg center-block add_button">Add</button>
 				</div>
 
 				<div id="activity_list" class="info list">
 					<div class="inner-info">
-						<h3>Activities</h3>
+						<h3 class="desktop">Activities</h3>
+						<div class="mobile_menu">
+							<h2 class="activity_button active">Activities</h2> | <h2 class="hotel_button">Hotels</h2> | <h2 class="restaurant_button">Restaurants</h2>
+						</div>
 						<ul>
 						{% for activity in activities %}
-							<li>{{activity.name}}</li>
+							<li class="white-heart">{{activity.name}}</li>
 						{% endfor %}
 						</ul>
+
 					</div>
+					<button type="button" class="btn btn-lg center-block add_button">Add</button>
 				</div>
 
 			</div>

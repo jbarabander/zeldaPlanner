@@ -338,6 +338,7 @@ table {
   border-spacing: 0; }
 
 body {
+  width: 100%;
   padding: 1%;
   background: url("/images/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -353,8 +354,8 @@ body {
 @font-face {
   body {
     font-family: 'triforce';
-    src: url("fonts/Triforce.ttf");
-    src: local("triforce"), local("triforce"), url("fonts/triforce.ttf") format("truetype"); } }
+    src: url("/fonts/Triforce.ttf");
+    src: local("triforce"), local("triforce"), url("/fonts/Triforce.ttf") format("truetype"); } }
   body .info {
     background-color: #66bb6a;
     width: 100%;
@@ -362,11 +363,10 @@ body {
     border-radius: 5px; }
     @media (min-device-width: 1025px) {
       body .info {
-        height: 65vh;
-        overflow: auto; } }
+        height: 65vh; } }
     @media (max-device-width: 500px) {
       body .info {
-        height: auto; } }
+        height: 40vh; } }
     body .info div {
       opacity: 1;
       color: #374012; }
@@ -437,6 +437,13 @@ body {
       body .info-block {
         width: 48%;
         padding: 1%; } }
+  @media (min-device-width: 1025px) {
+    body .inner-info {
+      height: 90%;
+      overflow: auto; } }
+  @media (max-device-width: 500px) {
+    body .inner-info {
+      height: 90%; } }
   body #map-block {
     text-align: center;
     vertical-align: top; }
@@ -450,3 +457,36 @@ body {
     left: 1%; }
   body .right {
     right: 1%; }
+  body .red-heart {
+    background: url("/images/heart-red.svg") no-repeat left top; }
+  body .white-heart {
+    background: url("/images/heart-white.svg") no-repeat left top; }
+  body .white-heart, body .red-heart {
+    background-size: 20px 20px;
+    padding-left: 18px;
+    margin-top: 2%; }
+  @media (min-device-width: 1025px) {
+    body .mobile_menu {
+      display: none; } }
+  @media (max-device-width: 700px) {
+    body .buttons {
+      display: none; }
+    body .desktop {
+      display: none; }
+    body .navbar-header, body .navbar-header {
+      display: block;
+      clear: both;
+      width: 100%;
+      height: auto; }
+    body .navbar {
+      clear: both;
+      height: 100px; }
+    body .mobile_menu {
+      text-align: center; } }
+  body .activity_button, body .hotel_button, body .restaurant_button {
+    display: inline-block; }
+  body .active {
+    font-weight: bold;
+    color: white; }
+  body .add_button {
+    width: 90%; }
